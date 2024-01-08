@@ -64,6 +64,13 @@ def multipleoption(request):
 
 
     return render (request,'multipleoption.html',d)
+
+
+
+def checkBox (request):
+    QLCO=Course.objects.all()
+    d={'courses':QLCO}
+    return render (request,'checkBox.html',d)
     
 
 

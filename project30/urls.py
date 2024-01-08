@@ -23,4 +23,5 @@ urlpatterns = [
     path('insert_course/',insert_course,name='insert_course'),
     path('insert_student/',insert_student,name='insert_student'),
     path('multipleoption/',multipleoption,name='multipleoption'),
+    path('checkBox/',checkBox,name='checkBox'),
 ]

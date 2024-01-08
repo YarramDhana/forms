@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>checkbox</h1>
+        <form action="{% url 'multipleoption' %}" method="POST">
+            {% csrf_token %}
+            select Course:
+            <br><br>
+            {% for co in courses %}
+            <label for="cn">{{co.cname}}</label>
+                <input type="checkbox" name="cn" id="cn" value="{{co.cname}}"><br><br>
+            {% endfor %}
+
+            <input type="submit" value="checkBox"><br><br>
+
+
+        </form>
+    </center>
+    
+</body>
+</html>
